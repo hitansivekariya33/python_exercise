@@ -32,3 +32,8 @@ my_lst = [i  for i in numbers if numbers.count(i)>1]
 set1 = list(set(my_lst))
 print(len(set1))
 
+lst1 = []
+for i in numbers:
+    if i not in lst1:
+        lst1.append(i)
+print(lst1)
