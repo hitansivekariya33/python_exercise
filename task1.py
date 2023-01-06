@@ -28,3 +28,7 @@ for i in numbers:
         sum += i
 print(sum)
 
+my_lst = [i  for i in numbers if numbers.count(i)>1]
+set1 = list(set(my_lst))
+print(len(set1))
+
