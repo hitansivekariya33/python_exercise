@@ -22,3 +22,9 @@ print(len(numbers))
 
 print(numbers[:3])
 
+sum = 0 
+for i in numbers:
+    if i%2 !=0:
+        sum += i
+print(sum)
+
