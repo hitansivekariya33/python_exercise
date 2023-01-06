@@ -37,7 +37,7 @@ counts = dict(Counter(numbers))
 duplicate = {key:value for key,value in counts.items() if value > 1}
 print(len(duplicate))
 
-#display list without duplicate number
+#display list without duplicate numbers
 lst1 = []
 for i in numbers:
     if i not in lst1:
