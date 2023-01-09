@@ -24,3 +24,7 @@ print(dict_len)
 
 #print only length 
 print("length is ::",list(dict_len.values()))
+
+#name with length in sorted order
+sorted_dict=sorted(dict_len.items(), key=lambda x: x[1])
+print("name with length::",sorted_dict)
