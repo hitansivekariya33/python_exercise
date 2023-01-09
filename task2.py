@@ -40,9 +40,11 @@ print(len_wise_name)
 #three most frequent
 three_most_freq = sorted(len_wise_name)[:3]
 for three_most in three_most_freq:
-    if three_most==5:
-        print("6 names of length 5::",len_wise_name[three_most])
-    if three_most==6:
-        print("4 names of length 6::",len_wise_name[three_most])
-    if three_most==7:
-        print("2 names of length 7::",len_wise_name[three_most])
+    print(len_wise_name[three_most])
+
+#three least frequent
+print("three least frequent")
+three_most_freq = sorted(len_wise_name)[-3:]
+for three_most in three_most_freq:
+    print(len_wise_name[three_most])
+   
