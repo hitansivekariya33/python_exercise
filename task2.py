@@ -13,3 +13,11 @@ o The three least frequent name lenghts are:
 2 names of length 8: ['Williams', 'Anderson']
 4 names of length 6: ['Miller', 'Wilson', 'Taylor', 'Thomas']
 '''
+
+#find length of each word 
+names = ['Smith', 'Johnson', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson', 'Moore', 'Taylor', 'Anderson', 'Thomas', 'Jackson', 'White']
+
+dict_len = {}
+for name in names:
+    dict_len[name] = len(name)
+print(dict_len)
