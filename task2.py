@@ -28,3 +28,21 @@ print("length is ::",list(dict_len.values()))
 #name with length in sorted order
 sorted_dict=sorted(dict_len.items(), key=lambda x: x[1])
 print("name with length::",sorted_dict)
+
+len_wise_name = dict()
+for name_len in sorted_dict:
+    if name_len[1] in len_wise_name.keys():
+        len_wise_name[name_len[1]].append(name_len[0])
+    else:
+        len_wise_name[name_len[1]] = [name_len[0]]
+print(len_wise_name)
+
+#three most frequent
+three_most_freq = sorted(len_wise_name)[:3]
+for three_most in three_most_freq:
+    if three_most==5:
+        print("6 names of length 5::",len_wise_name[three_most])
+    if three_most==6:
+        print("4 names of length 6::",len_wise_name[three_most])
+    if three_most==7:
+        print("2 names of length 7::",len_wise_name[three_most])
