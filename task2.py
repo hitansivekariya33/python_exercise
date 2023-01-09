@@ -21,3 +21,6 @@ dict_len = {}
 for name in names:
     dict_len[name] = len(name)
 print(dict_len)
+
+#print only length 
+print("length is ::",list(dict_len.values()))
