@@ -40,15 +40,6 @@ for name_len in sorted_dict:
 print(len_wise_name)
 
 #three most frequent
-three_most_freq = Counter(len_wise_name)
-most = sorted(three_most_freq.most_common(3))
-for three_most in most:
-    print(len(three_most[1]),"name of length is",three_most[0],":",three_most[1])
-
-
-
-#three least frequent
-print("three least frequent")
-least = sorted(three_most_freq.most_common())[-3:]
-for three_least in least:
-    print(len(three_least[1]),"name of length is",three_least[0],":",three_least[1])
+most = dict(sorted(len_wise_name.items())[:3])
+for three_most_key,three_most_value in most.items():
+    print(len(three_most_value),"name of length is",three_most_key,":",three_most_value)
