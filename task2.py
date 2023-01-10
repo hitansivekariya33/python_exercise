@@ -1,3 +1,5 @@
+from collections import Counter
+
 '''
 You are given a list of person names. Your task is to find out the three most frequent and three least frequent names.
  Input:
@@ -38,13 +40,12 @@ for name_len in sorted_dict:
 print(len_wise_name)
 
 #three most frequent
-three_most_freq = sorted(len_wise_name)[:3]
-for three_most in three_most_freq:
-    print(len_wise_name[three_most])
+three_most_freq = Counter(len_wise_name)
+most = sorted(three_most_freq.most_common(3))
+for three_most in most:
+    print(len(three_most[1]),"name of length is",three_most[0],":",three_most[1])
+
+
 
 #three least frequent
-print("three least frequent")
-three_most_freq = sorted(len_wise_name)[-3:]
-for three_most in three_most_freq:
-    print(len_wise_name[three_most])
-   
+
