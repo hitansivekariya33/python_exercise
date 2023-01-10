@@ -43,3 +43,8 @@ print(len_wise_name)
 most = dict(sorted(len_wise_name.items())[:3])
 for three_most_key,three_most_value in most.items():
     print(len(three_most_value),"name of length is",three_most_key,":",three_most_value)
+
+#three least frequent
+least = dict(sorted(len_wise_name.items())[-3:])
+for three_least_key,three_least_value in least.items():
+    print(len(three_least_value),"name of length is",three_least_key,":",three_least_value)
