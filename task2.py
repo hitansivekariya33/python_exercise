@@ -48,4 +48,7 @@ for three_most in most:
 
 
 #three least frequent
-
+print("three least frequent")
+least = sorted(three_most_freq.most_common())[-3:]
+for three_least in least:
+    print(len(three_least[1]),"name of length is",three_least[0],":",three_least[1])
