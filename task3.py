@@ -17,3 +17,8 @@ for i in sentences:
     word_trees.append(i.split())
 print("word_trees =",word_trees)
 
+#Number of time each word appears:
+word_tree = []
+split_sentence=[words for list_tree in sentences for words in list_tree.split()]
+counts = Counter(split_sentence)
+print("Number of time each word appears:",dict(counts))
