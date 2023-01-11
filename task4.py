@@ -21,3 +21,10 @@ def fibonacci(number):
    memoized[number] = fibonacci(number - 1) + fibonacci(number - 2)  
    return memoized[number]
 print(fibonacci(input_num))
+
+def Sum(num_list):
+    if not num_list:
+        return 0  
+    else:
+        return num_list[0] + Sum(num_list[1:])
+print(Sum([23, 44, 5, 67, 1, 1, 2, 4, 5]))
