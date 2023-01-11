@@ -1,3 +1,4 @@
+import re
 '''
 
 7. You are given a list of email addresses. Filter out the validate emails. (You can use regex here)
@@ -13,3 +14,11 @@ emails = [abc@gmail.com, 123$tt*@xyz.com, good@bad@uk.in, nasa@usa12.space, no-r
 emails = [abc@gmail.com, nasa@usa12.space, no-reply@domain.in, ramhanuman@saketa.lok]
 
 '''
+emails = ['abc@gmail.com', '123$tt*@xyz.com', 'good@bad@uk.in','nasa@usa12.space','no-reply@domain.in', 'ramhanuman@saketa.lok','ruhi.mohan@exter123.123','fake@fake123.fakercom']
+
+email_validation = '^[A-Za-z0-9_-]+@[A-Za-z0-9]+\.[A-Z|a-z]{2,5}'
+valid_email = [] 
+for email in emails:
+    if(re.fullmatch(email_validation, email)):
+        valid_email.append(email)
+print(valid_email)
