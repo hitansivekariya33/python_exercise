@@ -31,9 +31,9 @@ for i in range (num_elements):
 print("Your List is:", create_list)
 
 #Create a recursion function that calculate the sum of numbers present in the list. o Input:
-def Sum(num_list):
+def num_sum(num_list):
     if not num_list:
         return 0  
     else:
-        return num_list[0] + Sum(num_list[1:])
-print(Sum(create_list))
+        return num_list[0] + num_sum(num_list[1:])
+print(num_sum(create_list))
