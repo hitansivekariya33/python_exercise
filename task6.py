@@ -5,3 +5,6 @@ string = “PQRQRQRQ” substring = “QRQ”
  Output: 3
 
 '''
+import re
+string = "PQRQRQRQ"
+print(len(re.findall('(?=QRQ)', string)))
