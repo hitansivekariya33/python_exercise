@@ -22,9 +22,18 @@ def fibonacci(number):
    return memoized[number]
 print(fibonacci(input_num))
 
+#create list input 
+num_elements = int(input("Enter a number elements::"))
+create_list = []
+for i in range (num_elements):
+    store_num = int(input())
+    create_list.append(store_num)
+print("Your List is:", create_list)
+
+#Create a recursion function that calculate the sum of numbers present in the list. o Input:
 def Sum(num_list):
     if not num_list:
         return 0  
     else:
         return num_list[0] + Sum(num_list[1:])
-print(Sum([23, 44, 5, 67, 1, 1, 2, 4, 5]))
+print(Sum(create_list))
