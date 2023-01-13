@@ -12,3 +12,11 @@ One term wrong A.P. = [2, 5, 8, 11, 15, 17] One term wrong G.P. = [3, 9, 27, 81,
  Output:
 Correct A.P. = [2, 5, 8, 11, 14, 17] Correct G.P. = [3, 9, 27, 81, 243, 729]
 '''
+
+arithmetic = [2, 5, 8, 11, 15, 17]
+for i in range(len(arithmetic)-1):
+    if arithmetic[i+1]-arithmetic[i]!= 3:
+        arithmetic[i+1] = arithmetic[i]+3
+print(arithmetic)
+
+      
