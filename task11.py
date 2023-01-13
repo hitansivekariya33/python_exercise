@@ -19,4 +19,9 @@ for i in range(len(arithmetic)-1):
         arithmetic[i+1] = arithmetic[i]+3
 print(arithmetic)
 
-      
+
+geometric = [3, 9, 27, 81, 244, 729]
+for i in range(len(geometric)-1):
+    if geometric[i+1]/geometric[i]!= 3:
+        geometric[i+1] = geometric[i]*3
+print(geometric)     
