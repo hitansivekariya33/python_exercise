@@ -56,7 +56,7 @@ class BankAccount:
         self.acct_num = acct_num
         self.balance = balance
         self.pin = pin 
-
+    #display detail
     def __str__(self):
         return f'Account Holder Name :~ {self.name} \nAccount Holder Number :~ {self.acct_num}\nTotal balance :~ {self.balance}'
     
@@ -66,7 +66,7 @@ class BankAccount:
             return self.__str__()
         else:
             print("Oops! Your pin is incorrect")
-    
+    #deposit money
     def deposit(self,amount):
         input_pin = int(input("Enter a correct pin :~ "))
         if input_pin == self.pin:
@@ -75,8 +75,20 @@ class BankAccount:
             print("available balance ",self.balance)
         else:
             print("Oops! Your pin is incorrect")
+    #withdraw money
+    def withdraw(self,amount):
+        input_pin = int(input("Enter a correct pin :~ "))
+        if input_pin == self.pin:
+            if self.balance <= amount :
+                print("Your account don’t have sufficient balance.")
+            else:
+                self.balance = self.balance - amount 
+                print(amount,"will be withdrawn from the account")
+                print("Available balance ",self.balance)
 
 b1 = BankAccount("Ram","Ram2323",2000,2323) 
 print(b1.check_pin())
 add_amount= int(input("Enter what you want to deposite :~ "))
 b1.deposit(add_amount)
+withdraw_amt= int(input("Enter what you want to withdraw :~ "))
+b1.withdraw(withdraw_amt)
