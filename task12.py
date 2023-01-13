@@ -66,6 +66,17 @@ class BankAccount:
             return self.__str__()
         else:
             print("Oops! Your pin is incorrect")
-   
+    
+    def deposit(self,amount):
+        input_pin = int(input("Enter a correct pin :~ "))
+        if input_pin == self.pin:
+            self.balance = self.balance + amount 
+            print(amount,"added successfully")
+            print("available balance ",self.balance)
+        else:
+            print("Oops! Your pin is incorrect")
+
 b1 = BankAccount("Ram","Ram2323",2000,2323) 
 print(b1.check_pin())
+add_amount= int(input("Enter what you want to deposite :~ "))
+b1.deposit(add_amount)
