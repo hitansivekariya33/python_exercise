@@ -50,3 +50,22 @@ o Print(b1)
 Account Holder Name: Ram Account Number: 12345 Total Balance: 2200
 
 '''
+class BankAccount:
+    def __init__(self,name,acct_num,balance,pin):
+        self.name = name
+        self.acct_num = acct_num
+        self.balance = balance
+        self.pin = pin 
+
+    def __str__(self):
+        return f'Account Holder Name :~ {self.name} \nAccount Holder Number :~ {self.acct_num}\nTotal balance :~ {self.balance}'
+    
+    def check_pin(self):
+        input_pin = int(input("Enter a correct pin :~ "))
+        if input_pin == self.pin:
+            return self.__str__()
+        else:
+            print("Oops! Your pin is incorrect")
+   
+b1 = BankAccount("Ram","Ram2323",2000,2323) 
+print(b1.check_pin())
