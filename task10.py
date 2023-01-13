@@ -33,3 +33,20 @@ for i in range(1, numbers+1):
   if i < 0:
     i = -i
   print(" " * i + "*" * (numbers - i*2) + " "*i)
+
+print("---------------------------------------------")
+#pattern 3
+'''
+*
+**
+* *
+*  *
+*****
+'''
+for i in range(1,numbers+1):
+    for j in range(1,i+1):
+        if i==1 or j==1 or i==numbers or j==i:
+            print("*", end="")
+        else:
+            print(" ",end="")
+    print()
