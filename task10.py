@@ -50,3 +50,20 @@ for i in range(1,numbers+1):
         else:
             print(" ",end="")
     print()
+
+print("---------------------------------------------")
+#pattern 4
+'''
+*****
+*   *
+*   *
+*   *
+*****
+'''
+for i in range(0, numbers):
+    for j in range(0, numbers):
+        if i==0 or j==0 or i == numbers-1 or j == numbers-1:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
