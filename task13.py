@@ -34,10 +34,17 @@ class Number:
     def get(self):
         return numbers
 
+    #create new list which print double value
+    def change_original_values(self,func:lambda x:x):
+        new_numbers = list(map(func,numbers))
+        return new_numbers
+
 if __name__ == "__main__":
     numbers = [2,5,1,66,22,11,10]
 
     n1=Number(numbers)
     print("Numbers: ",n1.get())
-
+    
+    #create lambda function which return double value
+    print("New values:", n1.change_original_values(func=lambda x : x*2))
 
