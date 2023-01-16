@@ -39,6 +39,11 @@ class Number:
         new_numbers = list(map(func,numbers))
         return new_numbers
 
+    #create new list which print filtered value 
+    def filter_values(self,filter_func: lambda x:x):
+        filtered_numbers = list(filter(filter_func,numbers)) 
+        return filtered_numbers
+
 if __name__ == "__main__":
     numbers = [2,5,1,66,22,11,10]
 
@@ -48,3 +53,5 @@ if __name__ == "__main__":
     #create lambda function which return double value
     print("New values:", n1.change_original_values(func=lambda x : x*2))
 
+    #create lambda function which return even value
+    print("Filtered values:",n1.filter_values(filter_func=lambda x : (x%2==0)))
