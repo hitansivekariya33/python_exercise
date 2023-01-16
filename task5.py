@@ -15,4 +15,10 @@ See here, each pair addition is equals to 12 i.e. (3+9=12, 4+8=12, 2+10=12)
 numbers = [9, 4, 8, 10, 2, 4, 8, 3, 14, 4, 8]
 #find unique combination
 combination = list(combinations(set(numbers),2))
-print(combination)
+#check sum of each pair
+input_sum = int(input("Enter sum :~"))
+list_sum = []
+for combo in combination:
+    if combo[0]+combo[1] == input_sum:
+       list_sum.append(list(combo))
+print(list_sum)
