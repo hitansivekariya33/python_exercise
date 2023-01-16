@@ -1,3 +1,4 @@
+import functools
 '''
 Class Number:
 def __init__(self, numbers)
@@ -44,6 +45,10 @@ class Number:
         filtered_numbers = list(filter(filter_func,numbers)) 
         return filtered_numbers
 
+    def compound_the_numbers(self, reduce_func: lambda compound, d: compound + d):
+        compounded_value = functools.reduce(reduce_func,numbers)
+        return compounded_value
+
 if __name__ == "__main__":
     numbers = [2,5,1,66,22,11,10]
 
@@ -55,3 +60,6 @@ if __name__ == "__main__":
 
     #create lambda function which return even value
     print("Filtered values:",n1.filter_values(filter_func=lambda x : (x%2==0)))
+
+    #create lambda function which return compounded value 
+    print("Compounded value:",n1.compound_the_numbers(reduce_func=lambda compound,d : compound +d))
