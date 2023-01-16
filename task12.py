@@ -68,17 +68,14 @@ class BankAccount:
             print("Oops! Your pin is incorrect")
     #deposit money
     def deposit(self,amount):
-        input_pin = int(input("Enter a correct pin :~ "))
-        if input_pin == self.pin:
+        if self.check_pin():
             self.balance = self.balance + amount 
             print(amount,"added successfully")
             print("available balance ",self.balance)
-        else:
-            print("Oops! Your pin is incorrect")
+        
     #withdraw money
     def withdraw(self,amount):
-        input_pin = int(input("Enter a correct pin :~ "))
-        if input_pin == self.pin:
+        if self.check_pin():
             if self.balance <= amount :
                 print("Your account don’t have sufficient balance.")
             else:
