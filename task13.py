@@ -49,6 +49,11 @@ class Number:
         compounded_value = functools.reduce(reduce_func,numbers)
         return compounded_value
 
+    #return sorted list
+    def sort(self):
+        sorted_list = sorted(numbers)
+        return sorted_list
+
 if __name__ == "__main__":
     numbers = [2,5,1,66,22,11,10]
 
@@ -63,3 +68,6 @@ if __name__ == "__main__":
 
     #create lambda function which return compounded value 
     print("Compounded value:",n1.compound_the_numbers(reduce_func=lambda compound,d : compound +d))
+
+    #sort the list 
+    print("sorted list:",n1.sort())
