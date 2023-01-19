@@ -12,16 +12,17 @@ One term wrong A.P. = [2, 5, 8, 11, 15, 17] One term wrong G.P. = [3, 9, 27, 81,
  Output:
 Correct A.P. = [2, 5, 8, 11, 14, 17] Correct G.P. = [3, 9, 27, 81, 243, 729]
 '''
-ratio = int(input("Enter ratio:~"))
-arithmetic = [2, 5, 8, 11, 15, 17]
-for i in range(len(arithmetic)-1):
-    if arithmetic[i+1]-arithmetic[i]!= ratio:
-        arithmetic[i+1] = arithmetic[i]+ratio
-print(arithmetic)
+arithmetic_progression = [2, 5, 8, 11, 15, 17]
+difference = arithmetic_progression[1] - arithmetic_progression[0]
+for i in range(len(arithmetic_progression)-1):
+    if arithmetic_progression[i+1] - difference != arithmetic_progression[i]:
+        arithmetic_progression[i+1] = arithmetic_progression[i] + difference
+print("Arithmetic Progression", arithmetic_progression)
 
 
-geometric = [3, 9, 27, 81, 244, 729]
-for i in range(len(geometric)-1):
-    if geometric[i+1]/geometric[i]!= ratio:
-        geometric[i+1] = geometric[i]*ratio
-print(geometric)     
+geometric_progression = [3, 9, 27, 81, 244, 729]
+ratio = geometric_progression[1] / geometric_progression[0]
+for i in range(len(geometric_progression)-1):
+    if geometric_progression[i+1] / ratio != geometric_progression[i]:
+        geometric_progression[i+1] = geometric_progression[i] * ratio
+print("Geomatric Progression", geometric_progression)     
