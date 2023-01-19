@@ -13,11 +13,12 @@ intervals= timedelta(hours=6)*diff_date.days
 print(diff_date-intervals)
 
 
-delta = enddate_str - startdate_str   # returns timedelta
-test_time = []
-for i in range(delta.days + 1):
-    test_time.append(p.closed(startdate_str + timedelta(i),startdate_str+timedelta(i,hours=6)))
-    withhours=startdate_str + timedelta(i)
-    withouthours=startdate_str+timedelta(i,hours=6)
-    diff = withouthours-withhours
-print(delta-delta.days*diff)
+#taked input of two date and time
+start_date_time = input('Enter start time DD-MM-YYYY H:M:S format:~ ')
+end_date_time = input('Enter end time DD-MM-YYYY H:M:S in 24 hours format:~ ')
+
+start_date_time = datetime.strptime(start_date_time,'%d-%m-%Y %H:%M:%S')
+end_date_time = datetime.strptime(end_date_time,'%d-%m-%Y %H:%M:%S')
+
+#find differance between two dates
+date_differance =  end_date_time-start_date_time
