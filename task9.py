@@ -22,3 +22,12 @@ end_date_time = datetime.strptime(end_date_time,'%d-%m-%Y %H:%M:%S')
 
 #find differance between two dates
 date_differance =  end_date_time-start_date_time
+
+#find interval between start date and end date
+start_end_interval = p.closed(start_date_time,end_date_time)
+
+#find night interval
+night_time = []
+while start_date_time <= end_date_time:
+    night_time.append(p.closed(datetime.combine(start_date_time,time()),datetime.combine(start_date_time,time())+timedelta(hours=6)))
+    start_date_time+=timedelta(days=1)
